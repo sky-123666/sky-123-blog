@@ -1,0 +1,494 @@
+
+
+
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#FFF">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="icon" type="image/ico" sizes="32x32" href="/images/favicon.ico">
+  <meta http-equiv="Cache-Control" content="no-transform">
+  <meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+<link rel="alternate" type="application/rss+xml" title="Sky" href="https://blog.sky-home.top/rss.xml" />
+<link rel="alternate" type="application/atom+xml" title="Sky" href="https://blog.sky-home.top/atom.xml" />
+<link rel="alternate" type="application/json" title="Sky" href="https://blog.sky-home.top/feed.json" />
+
+<link rel="stylesheet" href="//fonts.googleapis.com/css?family=Mulish:300,300italic,400,400italic,700,700italic%7CFredericka%20the%20Great:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20JP:300,300italic,400,400italic,700,700italic%7CNoto%20Serif%20SC:300,300italic,400,400italic,700,700italic%7CInconsolata:300,300italic,400,400italic,700,700italic&display=swap&subset=latin,latin-ext">
+
+<link rel="stylesheet" href="/css/app.css?v=0.2.5">
+
+  
+
+<link rel="canonical" href="https://blog.sky-home.top/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+
+
+
+  <title>
+SignalRGB安装教程 |
+Sky's blog = Sky = 已知花意，未闻花名，再见花时，泪已千行</title><meta name="robots" content="noindex">
+<meta name="generator" content="Hexo 8.1.1"></head>
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div id="loading">
+    <div class="cat">
+      <div class="body"></div>
+      <div class="head">
+        <div class="face"></div>
+      </div>
+      <div class="foot">
+        <div class="tummy-end"></div>
+        <div class="bottom"></div>
+        <div class="legs left"></div>
+        <div class="legs right"></div>
+      </div>
+      <div class="paw">
+        <div class="hands left"></div>
+        <div class="hands right"></div>
+      </div>
+    </div>
+  </div>
+  <div id="container">
+    <header id="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="inner">
+        <div id="brand">
+          <div class="pjax">
+          
+  <h1 itemprop="name headline">SignalRGB安装教程
+  </h1>
+  
+<div class="meta">
+  <span class="item" title="创建时间：2026-02-12 19:07:31">
+    <span class="icon">
+      <i class="ic i-calendar"></i>
+    </span>
+    <span class="text">发表于</span>
+    <time itemprop="dateCreated datePublished" datetime="2026-02-12T19:07:31+08:00">2026-02-12</time>
+  </span>
+</div>
+
+
+          </div>
+        </div>
+        <nav id="nav">
+  <div class="inner">
+    <div class="toggle">
+      <div class="lines" aria-label="切换导航栏">
+        <span class="line"></span>
+        <span class="line"></span>
+        <span class="line"></span>
+      </div>
+    </div>
+    <ul class="menu">
+      <li class="item title"><a href="/" rel="start">Sky's blog</a></li>
+    </ul>
+    <ul class="right">
+      <li class="item theme">
+        <i class="ic i-sun"></i>
+      </li>
+      <li class="item search">
+        <i class="ic i-search"></i>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+      </div>
+      <div id="imgs" class="pjax">
+        <ul>
+          <li class="item" data-background-image="https://gitee.com/sky-123666/sky-blog-image-hosting/raw/master/images/clannad/clannad_2.jpg/"></li>
+          <li class="item" data-background-image="https://gitee.com/sky-123666/sky-blog-image-hosting/raw/master/images/clannad/clannad_4.jpg/"></li>
+          <li class="item" data-background-image="https://gitee.com/sky-123666/sky-blog-image-hosting/raw/master/images/chuunibyou/chuunibyou_4.jpg/"></li>
+          <li class="item" data-background-image="https://gitee.com/sky-123666/sky-blog-image-hosting/raw/master/images/clannad/clannad_3.jpg/"></li>
+          <li class="item" data-background-image="https://gitee.com/sky-123666/sky-blog-image-hosting/raw/master/images/honma_meiko/honma_meiko_3.jpg/"></li>
+          <li class="item" data-background-image="https://gitee.com/sky-123666/sky-blog-image-hosting/raw/master/images/honma_meiko/honma_meiko_5.jpg/"></li>
+        </ul>
+      </div>
+    </header>
+    <div id="waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax">
+          <use xlink:href="#gentle-wave" x="48" y="0" />
+          <use xlink:href="#gentle-wave" x="48" y="3" />
+          <use xlink:href="#gentle-wave" x="48" y="5" />
+          <use xlink:href="#gentle-wave" x="48" y="7" />
+        </g>
+      </svg>
+    </div>
+    <main>
+      <div class="inner">
+        <div id="main" class="pjax">
+          
+  <div class="article wrap">
+    
+<div class="breadcrumb" itemscope itemtype="https://schema.org/BreadcrumbList">
+<i class="ic i-home"></i>
+<span><a href="/">首页</a></span>
+</div>
+
+    <article itemscope itemtype="http://schema.org/Article" class="post block" lang="zh-CN">
+  <link itemprop="mainEntityOfPage" href="https://blog.sky-home.top/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/">
+
+  <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <meta itemprop="image" content="/images/avatar.jpg">
+    <meta itemprop="name" content="Sky">
+    <meta itemprop="description" content="已知花意，未闻花名，再见花时，泪已千行, 花无凋零之日，意无传递之时，爱情亘古不变，紫罗兰永世长存">
+  </span>
+
+  <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+    <meta itemprop="name" content="Sky">
+  </span>
+
+  <div class="body md" itemprop="articleBody">
+    
+
+    <h1 id="介绍"><a class="anchor" href="#介绍">#</a> 介绍</h1>
+<ul>
+<li><strong>文件下载</strong>:<span class="exturl" data-url="aHR0cHM6Ly9kb3duLm5vbGxpZS5jbi9TaWduYWxSR0IyLjUuMjglRTYlOTUlQjQlRTUlOTAlODglRTUlOEMlODUoc2t5KS56aXA=">SignalRGB 整合包</span></li>
+<li>如果出现问题可以查看<a href="#%E5%85%B6%E4%BB%96">其他</a>的里面的一些进阶教程，可以处理一部分问题</li>
+</ul>
+<h1 id="步骤1安装软件"><a class="anchor" href="#步骤1安装软件">#</a> 步骤 1. 安装软件</h1>
+<h2 id="安装软件本体"><a class="anchor" href="#安装软件本体">#</a> 安装软件本体</h2>
+<blockquote>
+<p>文件解压教程:<span class="exturl" data-url="aHR0cHM6Ly93d3cuYmlsaWJpbGkuY29tL3ZpZGVvL0JWMTF2Tjl6ZEVBOD90PTIzLjg="> 点击查看</span> () <span class="spoiler" title="你知道得太多了">如果你不会解压缩，我建议<strong>放弃后面所有步骤</strong>，<s><span class="exturl" data-url="aHR0cHM6Ly9tLnRiLmNuL2guN3lmRjBzSj90az1zTEszVW9ndkY4ZHRHLSMyMiUzRWxE"> 跳转</span></s></span><br />
+解压之后，打开附加包文件夹</p>
+</blockquote>
+<ol>
+<li>找到 <strong>install_SignalRGB.exe</strong>，双击安装<br />
+ <img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_srgb/install_SignalRGB.png" class="" width="540" height="320" title="安装软件本体"></li>
+<li>这个是启动加载界面，已经<strong>安装成功</strong>了，正在启动软件<br />
+ <img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_srgb/SIgnalRGB_startup.webp" class="" width="280" height="280" title="软件启动中"></li>
+<li>跳过登录<span class="spoiler" title="你知道得太多了">受限于网络环境，东大无法正常连接 SignalRGB 服务器，且不需要登录 (使用本地灯效)</span><br />
+<img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_srgb/continue_as_guest.webp" class="" width="480" height="280" title="以游客访问"></li>
+</ol>
+<hr />
+<h2 id="删除更新-保留稳定版本"><a class="anchor" href="#删除更新-保留稳定版本">#</a> 删除更新，保留稳定版本</h2>
+<p>这个软件<strong>更新之后经常出现问题</strong>，建议使用附加包里面的稳定版本，而不是从官网下载</p>
+<ol>
+<li>
+<p>打开任务管理器，结束掉<strong> Update</strong><br />
+<img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_srgb/Terminate_Update.png" class="" width="560" height="320" title="结束更新模块进程"></p>
+</li>
+<li>
+<p>右击 SignalRGB 打开文件所在位置<br />
+<strong> Update</strong> 是软件<strong>自动更新模块</strong>，APP-2.5.xx 这个是版本号，目前稳定版为 <strong>2.5.28</strong> 版本<br />
+ <img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_srgb/delet_SignalRGB&Update.png" class="" width="560" height="320" title="软件启动中"></p>
+</li>
+<li>
+<p>删掉<strong> Update</strong>，任务管理器里面结束一下<strong> Update</strong> 和<strong> SignalRGB Core</strong><span class="spoiler" title="你知道得太多了"> 如果不结束进程，会删不掉文件</span><br />
+确保版本是 <strong>app-2.5.28</strong> ，如果是<strong>大于这个版本</strong>的文件夹，那个文件夹<strong>删掉</strong>就行了<br />
+ <img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_srgb/Terminate_Update.png" class="" width="560" height="320" title="结束Update进程"><br />
+<img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_srgb/Terminate_SignalRGB.png" class="" width="560" height="320" title="结束SignalRGB进程"></p>
+</li>
+</ol>
+<h1 id="步骤2-安装汉化"><a class="anchor" href="#步骤2-安装汉化">#</a> 步骤 2. 安装汉化</h1>
+<ul>
+<li>2.5.x 版本在 SignalRGB 的设置里的 Language<span class="spoiler" title="你知道得太多了"> 语言</span>切换成 Chinese 即可<br />
+ <img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/SignalRGB_install_zh_cn/Switch_Chinese.webp" class="" width="560" height="320" title="结束SignalRGB进程"></li>
+</ul>
+<h1 id="步骤3安装附加包"><a class="anchor" href="#步骤3安装附加包">#</a> 步骤 3. 安装附加包</h1>
+<ul>
+<li>下载出来的附加包里面<strong> WhirlwindFX</strong> 里面有很多灯效和模型文件</li>
+<li>把附加包里面的 <strong>WhirlwindFX</strong> 粘贴文在 C:/Users/ 电脑用户名 /<strong> 文档</strong> ，然后重启 SignalRGB，这样就有更多灯效和模型文件了 <s><a href="#%E4%BF%AE%E6%94%B9%E9%99%84%E5%8A%A0%E5%8C%85%E4%BD%8D%E7%BD%AE">如果安装之后没有更多灯效</a></s></li>
+</ul>
+<p><img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_Modpack/Move_to_document.png" class="" title="安装附加包"></p>
+<p>当灯效和汉化都安装好了，来查看 <a href="/2026/02/12/SRGB%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" title="SRGB使用教程">SignalRGB使用教程</a> 吧</p>
+<hr />
+<h1 id="其他"><a class="anchor" href="#其他">#</a> 其他</h1>
+<blockquote>
+<p>这里是进阶教程一般不会用到它<br />
+但是可以解决某些<strong>偶然出现的问题</strong><br />
+当你遇见问题时，请详细阅读以下教程</p>
+</blockquote>
+<h2 id="认识-whirlwindfx-内部文件"><a class="anchor" href="#认识-whirlwindfx-内部文件">#</a> 认识 <strong>WhirlwindFX</strong> 内部文件</h2>
+<ol>
+<li>Effect 灯效</li>
+</ol>
+<ul>
+<li>路径: WhirlwindFX/Effect</li>
+<li>内容：灯效文件</li>
+<li>文件里面有灯效的源码</li>
+</ul>
+<ol start="2">
+<li>Plugins 插件</li>
+</ol>
+<ul>
+<li>路径: WhirlwindFX/Plugins</li>
+<li>内容：插件文件</li>
+<li>文件里面有控制器 / 键盘 / 鼠标的协议源码</li>
+</ul>
+<ol start="3">
+<li>Components 组件</li>
+</ol>
+<ul>
+<li>路径: WhirlwindFX/Components</li>
+<li>内容：模型文件</li>
+<li>网友制作的风扇 / 霓虹线 / 灯光设备 模型都在这里面</li>
+</ul>
+<h2 id="修改附加包位置"><a class="anchor" href="#修改附加包位置">#</a> 修改附加包位置</h2>
+<p>SignalRGB 的设置里的<strong> windows 设置</strong>内<br />
+找到<strong>附加包位置</strong>，可以自己切换路径，文件夹名字必须是 <strong>WhirlwindFX</strong><br />
+<img data-src="/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/install_Modpack/Edit_path.webp" class="" title="修改附加包位置"><br />
+ 如果安装附加包之后不生效，在这里受到切换到自己心仪的文件路径</p>
+<h2 id="问题排查"><a class="anchor" href="#问题排查">#</a> 问题排查:</h2>
+<h3 id="软件无法安装报错闪退"><a class="anchor" href="#软件无法安装报错闪退">#</a> 软件无法安装，报错，闪退</h3>
+<p>视频链接</p>
+<ol>
+<li>建议关闭杀毒软件后安装</li>
+<li>重启电脑后再重新安装</li>
+<li>注意电脑用户名不能是中文，<span class="exturl" data-url="aHR0cHM6Ly96aHVhbmxhbi56aGlodS5jb20vcC8xOTIwOTEyMjYyNjY0ODE5ODY1"> 把电脑修改成英文</span>，推荐使用数字 + 字母 <s>(推荐 ascii 码表里面的字符，以确保兼容性)</s></li>
+<li>需要在 BIOS 里面<span class="exturl" data-url="aHR0cHM6Ly93d3cuM2RtZ2FtZS5jb20vZ2wvMzk1Njc0Ny5odG1s">打开 AVX 指令集</span></li>
+</ol>
+<h3 id="安装完之后还是没有更多灯效"><a class="anchor" href="#安装完之后还是没有更多灯效">#</a> 安装完之后还是没有更多灯效</h3>
+<ol>
+<li>请查看<a href="#%E4%BF%AE%E6%94%B9%E9%99%84%E5%8A%A0%E5%8C%85%E4%BD%8D%E7%BD%AE">修改附加包地址</a></li>
+<li>检查目标目录的 WhirlwindFX<span class="spoiler" title="你知道得太多了"> 默认文档</span>里面的<strong> Effect</strong> 文件夹内 <span class="red"><strong>是否有文件</strong></span>，<em> 如果没有</em><strong>重新复制进去</strong></li>
+</ol>
+<!-- flag of hidden posts -->
+  </div>
+
+   <footer>
+
+    <div class="meta">
+  <span class="item">
+    <span class="icon">
+      <i class="ic i-calendar-check"></i>
+    </span>
+    <span class="text">更新于</span>
+    <time title="修改时间：2026-03-10 02:42:43" itemprop="dateModified" datetime="2026-03-10T02:42:43+08:00">2026-03-10</time>
+  </span>
+</div>
+
+      
+
+<div id="copyright">
+<ul>
+  <li class="author">
+    <strong>本文作者： </strong>Sky <i class="ic i-at"><em>@</em></i>Sky
+  </li>
+  <li class="link">
+    <strong>本文链接：</strong>
+    <a href="https://blog.sky-home.top/2026/02/12/SRGB%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/" title="SignalRGB安装教程">https://blog.sky-home.top/2026/02/12/SRGB安装教程/</a>
+  </li>
+  <li class="license">
+    <strong>版权声明： </strong>本站所有文章除特别声明外，均采用 <span class="exturl" data-url="aHR0cHM6Ly9jcmVhdGl2ZWNvbW1vbnMub3JnL2xpY2Vuc2VzL2J5LW5jLXNhLzQuMC9kZWVkLnpo"><i class="ic i-creative-commons"><em>(CC)</em></i>BY-NC-SA</span> 许可协议。转载请注明出处！
+  </li>
+</ul>
+</div>
+
+  </footer>
+
+</article>
+
+  </div>
+  
+
+<div class="post-nav">
+    <div class="item left">
+    </div>
+    <div class="item right">
+    </div>
+</div>
+
+  
+  <div class="wrap" id="comments"></div>
+
+
+        </div>
+        <div id="sidebar">
+          
+
+<div class="inner">
+
+  <div class="panels">
+    <div class="inner">
+      <div class="contents panel pjax" data-title="文章目录">
+          <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E4%BB%8B%E7%BB%8D"><span class="toc-number">1.</span> <span class="toc-text"> 介绍</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A41%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6"><span class="toc-number">2.</span> <span class="toc-text"> 步骤 1. 安装软件</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E8%BD%AF%E4%BB%B6%E6%9C%AC%E4%BD%93"><span class="toc-number">2.1.</span> <span class="toc-text"> 安装软件本体</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%88%A0%E9%99%A4%E6%9B%B4%E6%96%B0-%E4%BF%9D%E7%95%99%E7%A8%B3%E5%AE%9A%E7%89%88%E6%9C%AC"><span class="toc-number">2.2.</span> <span class="toc-text"> 删除更新，保留稳定版本</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A42-%E5%AE%89%E8%A3%85%E6%B1%89%E5%8C%96"><span class="toc-number">3.</span> <span class="toc-text"> 步骤 2. 安装汉化</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%AD%A5%E9%AA%A43%E5%AE%89%E8%A3%85%E9%99%84%E5%8A%A0%E5%8C%85"><span class="toc-number">4.</span> <span class="toc-text"> 步骤 3. 安装附加包</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%B6%E4%BB%96"><span class="toc-number">5.</span> <span class="toc-text"> 其他</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E8%AE%A4%E8%AF%86-whirlwindfx-%E5%86%85%E9%83%A8%E6%96%87%E4%BB%B6"><span class="toc-number">5.1.</span> <span class="toc-text"> 认识 WhirlwindFX 内部文件</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E4%BF%AE%E6%94%B9%E9%99%84%E5%8A%A0%E5%8C%85%E4%BD%8D%E7%BD%AE"><span class="toc-number">5.2.</span> <span class="toc-text"> 修改附加包位置</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%97%AE%E9%A2%98%E6%8E%92%E6%9F%A5"><span class="toc-number">5.3.</span> <span class="toc-text"> 问题排查:</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BD%AF%E4%BB%B6%E6%97%A0%E6%B3%95%E5%AE%89%E8%A3%85%E6%8A%A5%E9%94%99%E9%97%AA%E9%80%80"><span class="toc-number">5.3.1.</span> <span class="toc-text"> 软件无法安装，报错，闪退</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AE%89%E8%A3%85%E5%AE%8C%E4%B9%8B%E5%90%8E%E8%BF%98%E6%98%AF%E6%B2%A1%E6%9C%89%E6%9B%B4%E5%A4%9A%E7%81%AF%E6%95%88"><span class="toc-number">5.3.2.</span> <span class="toc-text"> 安装完之后还是没有更多灯效</span></a></li></ol></li></ol></li></ol>
+      </div>
+      <div class="related panel pjax" data-title="系列文章">
+      </div>
+      <div class="overview panel" data-title="站点概览">
+        <div class="author" itemprop="author" itemscope itemtype="http://schema.org/Person">
+  <img class="image" itemprop="image" alt="Sky"
+      data-src="/images/avatar.jpg">
+  <p class="name" itemprop="name">Sky</p>
+  <div class="description" itemprop="description">花无凋零之日，意无传递之时，爱情亘古不变，紫罗兰永世长存</div>
+</div>
+
+<nav class="state">
+    <div class="item posts">
+      <a href="/archives/">
+        <span class="count">1</span>
+        <span class="name">文章</span>
+      </a>
+    </div>
+</nav>
+
+<div class="social">
+</div>
+
+<ul class="menu">
+  
+    
+  <li class="item">
+    <a href="/" rel="section"><i class="ic i-home"></i>首页</a>
+  </li>
+
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-info-circle"></i>关于</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/about%20me/" rel="section"><i class="ic i-user"></i>关于本人</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/About%20This%20Site/" rel="section"><i class="ic i-info-circle"></i>关于本站</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-feather"></i>文章</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/archives/" rel="section"><i class="ic i-list-alt"></i>归档</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/categories/" rel="section"><i class="ic i-th"></i>分类</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/tags/" rel="section"><i class="ic i-tags"></i>标签</a>
+  </li>
+
+  </ul>
+        
+  <li class="item dropdown">
+      <a href="javascript:void(0);"><i class="ic i-paper-plane"></i>RGB导航</a>
+    <ul class="submenu">
+
+        
+  <li class="item">
+    <a href="/RGB_Navigation/" rel="section"><i class="ic i-paper-plane"></i>RGB导航</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/NollieRGB/" rel="section"><i class="ic i-"></i>NollieRGB</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/Yico%20Sync/" rel="section"><i class="ic i-"></i>Yico Sync</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/SignalRGB/" rel="section"><i class="ic i-"></i>SignalRGB</a>
+  </li>
+
+        
+  <li class="item">
+    <a href="/OpenRGB/" rel="section"><i class="ic i-"></i>OpenRGB</a>
+  </li>
+
+  </ul>
+
+</ul>
+
+      </div>
+    </div>
+  </div>
+
+  <ul id="quick">
+    <li class="prev pjax">
+    </li>
+    <li class="up"><i class="ic i-arrow-up"></i></li>
+    <li class="down"><i class="ic i-arrow-down"></i></li>
+    <li class="next pjax">
+    </li>
+    <li class="percent"></li>
+  </ul>
+</div>
+
+
+        </div>
+        <div class="dimmer"></div>
+      </div>
+    </main>
+    <footer id="footer">
+      <div class="inner">
+        <div class="widgets">
+          
+
+        </div>
+        <div class="status">
+  <div class="copyright">
+    
+    &copy; 
+    <span itemprop="copyrightYear">2026</span>
+    <span class="with-love">
+      <i class="ic i-sakura rotate"></i>
+    </span>
+    <span class="author" itemprop="copyrightHolder">Sky @ Sky's blog</span>
+  </div>
+  <div class="powered-by">
+    基于 <span class="exturl" data-url="aHR0cHM6Ly9oZXhvLmlv">Hexo</span> & Theme.<span class="exturl" data-url="aHR0cHM6Ly9naXRodWIuY29tL2FtZWhpbWUvaGV4by10aGVtZS1zaG9rYQ==">Shoka</span>
+  </div>
+</div>
+
+      </div>
+    </footer>
+  </div>
+<script data-config type="text/javascript">
+  var LOCAL = {
+    path: '2026/02/12/SRGB安装教程/',
+    favicon: {
+      show: "（●´3｀●）やれやれだぜ",
+      hide: "(´Д｀)大変だ！"
+    },
+    search : {
+      placeholder: "文章搜索",
+      empty: "关于 「 ${query} 」，什么也没搜到",
+      stats: "${time} ms 内找到 ${hits} 条结果"
+    },
+    valine: true,fancybox: true,
+    copyright: '复制成功，转载请遵守 <i class="ic i-creative-commons"></i>BY-NC-SA 协议。',
+    ignores : [
+      function(uri) {
+        return uri.includes('#');
+      },
+      function(uri) {
+        return new RegExp(LOCAL.path+"$").test(uri);
+      }
+    ]
+  };
+</script>
+
+<script src="https://cdn.polyfill.io/v2/polyfill.js"></script>
+
+<script src="//cdn.jsdelivr.net/combine/npm/pace-js@1.0.2/pace.min.js,npm/pjax@0.2.8/pjax.min.js,npm/whatwg-fetch@3.4.0/dist/fetch.umd.min.js,npm/animejs@3.2.0/lib/anime.min.js,npm/algoliasearch@4/dist/algoliasearch-lite.umd.js,npm/instantsearch.js@4/dist/instantsearch.production.min.js,npm/lozad@1/dist/lozad.min.js,npm/quicklink@2/dist/quicklink.umd.js"></script>
+
+<script src="/js/app.js?v=0.2.5"></script>
+
+
+
+
+</body>
+</html>
